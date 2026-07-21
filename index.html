@@ -3,497 +3,417 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DITTO AI — 인공지능과 동양 철학의 럭셔리 융합</title>
+    <title>DITTO AI — 내 손안의 다정한 AI 사주</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome (고급 디자인용 프리미엄 아이콘 라이브러리) -->
+    <!-- Font Awesome (이모지 감성의 아이콘 컬렉션) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Playfair Display & Cinzel 세리프 서체 및 한글 Noto Sans 조합 -->
+    <!-- 구글 Gowun Batang(둥글고 따뜻한 감성 서체) 및 부드러운 한글 고딕 로드 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;700;900&family=Playfair+Display:ital,wght@0,400;0,600;0,800;1,400&family=Noto+Sans+KR:wght@300;400;500;700&family=Orbitron:wght@400;600;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Nanum+Gothic+Coding&family=Nunito:wght@400;700;900&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
     
     <style>
         body {
-            font-family: 'Noto Sans KR', sans-serif;
-            background-color: #090909; /* 초고급 딥 블랙 */
-            color: #E6DFD5; /* 부드러운 샴페인 골드 크림 톤 */
+            font-family: 'Gowun Batang', 'Noto Sans KR', sans-serif;
+            background-color: #f6f5fa; /* 화사하고 따뜻한 크림 페일 퍼플 배경 */
+            color: #2e263d; /* 부드러운 소프트 챠콜 */
             overflow-x: hidden;
-            letter-spacing: -0.03em;
+            letter-spacing: -0.01em;
         }
-        .font-cinzel {
-            font-family: 'Cinzel', serif;
+        .font-gowun {
+            font-family: 'Gowun Batang', serif;
         }
-        .font-playfair {
-            font-family: 'Playfair Display', serif;
-        }
-        .font-orbitron {
-            font-family: 'Orbitron', sans-serif;
+        .font-nunito {
+            font-family: 'Nunito', sans-serif;
         }
         
-        /* 럭셔리 슬림 라인 프레임워크 데코레이션 */
-        .luxury-border {
-            border: 1px solid rgba(197, 168, 128, 0.2);
-            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        /* 둥글둥글한 소프트 클라우드 프레임 */
+        .cloud-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(20px);
+            border: 2px solid #ffffff;
+            box-shadow: 0 15px 35px rgba(181, 163, 212, 0.15);
+            border-radius: 24px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
-        .luxury-border:hover {
-            border-color: rgba(197, 168, 128, 0.5);
-            box-shadow: 0 10px 30px rgba(197, 168, 128, 0.05);
+        .cloud-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 40px rgba(181, 163, 212, 0.25);
         }
 
-        /* 럭셔리 골드 그라데이션 텍스트 */
-        .gold-luxury-text {
-            background: linear-gradient(135deg, #FFF 0%, #D4AF37 50%, #AA7C11 100%);
+        /* 화사한 캔디 파스텔 그라데이션 텍스트 */
+        .pastel-gradient-text {
+            background: linear-gradient(135deg, #a78bfa 0%, #ec4899 50%, #f59e0b 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
-        /* 은은하게 빛나는 우주 성도 입자 배경 */
-        .luxury-sky {
+        /* 몽환적이고 밝은 우주 파스텔 버블 배경 */
+        .pastel-universe {
             background-image: 
-                radial-gradient(1px 1px at 20px 30px, #E6DFD5, rgba(0,0,0,0)),
-                radial-gradient(1.5px 1.5px at 150px 120px, rgba(197, 168, 128, 0.4), rgba(0,0,0,0)),
-                radial-gradient(1px 1px at 300px 250px, #FFF, rgba(0,0,0,0));
-            background-size: 550px 550px;
-            animation: cosmicSlowShift 180s linear infinite;
-        }
-        @keyframes cosmicSlowShift {
-            from { background-position: 0 0; }
-            to { background-position: 550px 550px; }
+                radial-gradient(circle at 10% 20%, rgba(244, 114, 182, 0.12) 0%, transparent 40%),
+                radial-gradient(circle at 90% 10%, rgba(167, 139, 250, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 50% 80%, rgba(253, 230, 138, 0.2) 0%, transparent 45%);
+            background-size: 100% 100%;
         }
 
-        /* 무드 성운 가스 효과 */
-        .mist-layer {
-            background: radial-gradient(circle at 50% 50%, rgba(92, 42, 68, 0.05) 0%, transparent 70%);
-            pointer-events: none;
-        }
-
-        /* 인풋 럭셔리 노프레임 재정의 */
-        input, select, textarea {
-            background-color: transparent !important;
-            border: 1px solid rgba(197, 168, 128, 0.2) !important;
-            color: #E6DFD5 !important;
-            border-radius: 0px !important; /* 모던한 수평 앵글 */
+        /* 둥근 형태의 버튼 스타일 */
+        .round-btn {
+            border-radius: 30px;
             transition: all 0.3s ease;
         }
-        input:focus, select:focus, textarea:focus {
-            border-color: rgba(197, 168, 128, 0.8) !important;
-            outline: none;
-        }
 
-        /* 커스텀 스크롤바 */
+        /* 커스텀 테마 스크롤바 */
         ::-webkit-scrollbar {
-            width: 4px;
+            width: 6px;
         }
         ::-webkit-scrollbar-track {
-            background: #090909;
+            background: #f6f5fa;
         }
         ::-webkit-scrollbar-thumb {
-            background: #C5A880;
+            background: #c084fc;
+            border-radius: 10px;
         }
     </style>
 </head>
-<body class="luxury-sky min-h-screen relative font-light">
-    
-    <!-- 오닉스 감성 가스 가이드 오버레이 -->
-    <div class="mist-layer absolute inset-0 z-0"></div>
+<body class="pastel-universe min-h-screen relative font-normal">
 
-    <!-- 미니멀 럭셔리 상단 네비게이션 헤더 -->
-    <header class="fixed top-0 left-0 w-full z-50 bg-[#090909]/60 backdrop-blur-md border-b border-stone-900">
-        <div class="max-w-7xl mx-auto px-8 py-5 flex items-center justify-between">
-            <div class="flex items-center space-x-3">
-                <span class="font-cinzel text-xl tracking-[0.3em] text-white">DITTO</span>
-                <span class="h-4 w-[1px] bg-stone-800"></span>
-                <span class="font-orbitron text-xs tracking-widest text-[#C5A880]">AI</span>
+    <!-- 상단 둥글고 투명한 네비게이션 헤더 -->
+    <header class="fixed top-4 left-4 right-4 z-50 bg-white/70 backdrop-blur-md border border-white/80 rounded-full py-3.5 px-6 md:px-10 flex items-center justify-between shadow-sm">
+        <div class="flex items-center space-x-3">
+            <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-purple-400 via-pink-400 to-yellow-300 flex items-center justify-center shadow-sm">
+                <span class="font-nunito text-sm font-black text-white">d</span>
             </div>
-            
-            <!-- 모바일용 트리거 -->
-            <button id="menu-btn" class="md:hidden text-[#C5A880] focus:outline-none">
-                <i class="fa-solid fa-ellipsis-vertical text-xl"></i>
-            </button>
-
-            <!-- 데스크탑 메뉴 -->
-            <nav class="hidden md:flex items-center space-x-12 text-xs font-semibold tracking-[0.15em] text-stone-300">
-                <a href="#about" class="hover:text-[#C5A880] transition-colors duration-300">브랜드 스토리</a>
-                <a href="#tech" class="hover:text-[#C5A880] transition-colors duration-300">핵심 기술</a>
-                <a href="#test-report-zone" class="text-[#C5A880] hover:text-white transition-colors duration-300 flex items-center gap-2">
-                    <span class="w-1.5 h-1.5 rounded-full bg-[#C5A880] animate-pulse"></span>
-                    AI 사주 분석
-                </a>
-                <a href="#recruit" class="border border-stone-800 hover:border-[#C5A880] px-6 py-2.5 transition-all duration-500">체험단 신청</a>
-            </nav>
+            <span class="font-nunito text-lg font-black tracking-wider text-purple-600">DITTO <span class="text-pink-500">AI</span></span>
         </div>
+        
+        <!-- 모바일 트리거 -->
+        <button id="menu-btn" class="md:hidden text-purple-600 focus:outline-none">
+            <i class="fa-solid fa-bars text-xl"></i>
+        </button>
 
-        <!-- 모바일 드롭다운 메뉴 -->
-        <div id="mobile-menu" class="hidden md:hidden bg-[#090909] border-b border-stone-900 px-8 py-6 space-y-4 text-xs tracking-[0.15em]">
-            <a href="#about" class="block text-stone-300 hover:text-[#C5A880]">브랜드 스토리</a>
-            <a href="#tech" class="block text-stone-300 hover:text-[#C5A880]">핵심 기술</a>
-            <a href="#test-report-zone" class="block text-[#C5A880]">AI 사주 분석</a>
-            <a href="#recruit" class="block text-stone-300">체험단 신청</a>
-        </div>
+        <!-- 데스크탑 메뉴 -->
+        <nav class="hidden md:flex items-center space-x-8 text-xs font-semibold tracking-wide text-stone-600">
+            <a href="#about" class="hover:text-purple-600 transition">디토 이야기</a>
+            <a href="#tech" class="hover:text-purple-600 transition">이유 있는 기술</a>
+            <a href="#test-report-zone" class="text-purple-600 font-bold hover:text-pink-500 transition flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-pink-400 animate-ping"></span>
+                AI 사주 보기
+            </a>
+            <a href="#recruit" class="bg-purple-500 hover:bg-purple-600 text-white px-5 py-2 rounded-full transition-all">체험단 지원</a>
+        </nav>
     </header>
 
-    <!-- 히어로 섹션 (Hero Section) : 하이엔드 미니멀 오프닝 -->
-    <section class="relative min-h-screen flex flex-col justify-center items-center px-8 pt-32 pb-16 z-10 text-center">
-        <div class="max-w-4xl mx-auto space-y-10">
-            <!-- 최고급 슬로건 태그 -->
-            <div class="inline-block border border-stone-800 px-6 py-2 text-[10px] tracking-[0.25em] uppercase text-stone-400">
-                정밀 데이터 과학으로 해독하는 천명(天命)
+    <!-- 히어로 섹션 (Hero Section) : 따뜻하고 화사한 환영 -->
+    <section class="relative min-h-screen flex flex-col justify-center items-center px-6 pt-32 pb-16 z-10 text-center">
+        <div class="max-w-3xl mx-auto space-y-8">
+            
+            <!-- 다정한 문구 뱃지 -->
+            <div class="inline-block bg-white border border-purple-200 px-5 py-2 text-xs font-bold text-purple-600 round-btn shadow-sm">
+                🌸 나비처럼 다정하게 찾아오는 나만의 인생 지도
             </div>
 
-            <!-- 시그니처 럭셔리 국문 헤드라인 -->
-            <h1 class="text-4xl md:text-7xl font-playfair font-light leading-[1.2] text-white">
-                우주의 질서를 <br>
-                <span class="gold-luxury-text font-cinzel not-italic font-medium tracking-wide">해독하다</span>
+            <!-- 둥글고 감성적인 대형 헤드라인 -->
+            <h1 class="text-4xl md:text-6xl font-gowun font-bold leading-tight text-slate-800">
+                인생의 계절을 <br>
+                <span class="pastel-gradient-text not-italic font-bold">다정하게 읽어드려요</span>
             </h1>
 
-            <p class="text-stone-400 text-sm md:text-base font-light max-w-2xl mx-auto leading-relaxed">
-                DITTO AI는 수천 년 동안 축적된 고대 동양의 천체 역학인 사주명리학과 자미두수의 정밀 성격 지도를 시계열 데이터 기법으로 재정의합니다. 미신에서 벗어난, 가장 이성적이고 세련된 자아 성찰의 경험을 제안합니다.
+            <p class="text-slate-600 text-sm md:text-base font-light max-w-xl mx-auto leading-relaxed">
+                디토에이아이(DITTO AI)는 차가운 통계나 미신이 아닌, 나라는 우주를 차분히 들여다보는 따스한 행동 진단 가이드입니다. 복잡한 용어는 비우고, 오늘 필요한 핵심만을 간결히 담았습니다.
             </p>
 
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-6 pt-6 text-xs tracking-[0.15em]">
-                <a href="#test-report-zone" class="w-full sm:w-auto px-8 py-4 bg-[#C5A880] hover:bg-white text-black font-semibold transition-all duration-500">
-                    AI 운세 도구 체험하기
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4 text-xs font-semibold">
+                <a href="#test-report-zone" class="w-full sm:w-auto px-8 py-3.5 bg-gradient-to-r from-purple-400 via-pink-400 to-yellow-300 hover:scale-105 text-white font-bold round-btn shadow-md transition-transform duration-300">
+                    내 사주 즉시 연산하기
                 </a>
-                <a href="#about" class="w-full sm:w-auto px-8 py-4 border border-stone-800 hover:border-white transition-all duration-500">
-                    브랜드스토리 확인
+                <a href="#about" class="w-full sm:w-auto px-8 py-3.5 bg-white hover:bg-slate-50 text-purple-500 border border-purple-100 round-btn shadow-sm transition">
+                    조금 더 알아보기
                 </a>
             </div>
         </div>
 
-        <!-- 하단 스크롤 인디케이터 -->
-        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 text-[9px] tracking-[0.3em] text-stone-500 uppercase flex flex-col items-center gap-2 animate-bounce">
-            <span>아래로 스크롤</span>
-            <div class="h-8 w-[1px] bg-stone-800"></div>
+        <!-- 하단 스크롤 가이드 -->
+        <div class="absolute bottom-6 left-1/2 -translate-x-1/2 text-[10px] text-purple-400 uppercase flex flex-col items-center gap-1 animate-pulse">
+            <span class="font-nunito font-bold">Scroll</span>
+            <i class="fa-solid fa-chevron-down"></i>
         </div>
     </section>
 
-    <!-- 브랜드스토리 섹션 (About Us) -->
-    <section id="about" class="py-32 border-t border-stone-900 bg-[#070707]/60 relative z-10">
-        <div class="max-w-7xl mx-auto px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+    <!-- 브랜드스토리 (About DITTO AI) -->
+    <section id="about" class="py-24 border-t border-white/60 bg-white/40 relative z-10">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 
-                <!-- 왼쪽 인덱스 및 타이틀 -->
-                <div class="lg:col-span-4 space-y-4">
-                    <span class="font-cinzel text-xs tracking-[0.3em] text-[#C5A880]">01 / 철학</span>
-                    <h2 class="text-3xl md:text-5xl font-playfair italic font-light text-white leading-snug">
-                        고대 우주론과<br>인공지능의 만남
+                <!-- 왼쪽 타이틀 영역 -->
+                <div class="lg:col-span-5 space-y-4">
+                    <span class="text-xs font-bold text-pink-500 uppercase tracking-widest font-nunito">01 / BRAND</span>
+                    <h2 class="text-2xl md:text-4xl font-gowun font-bold text-slate-800 leading-snug">
+                        마음의 온도를 높이는<br>AI 기술
                     </h2>
-                    <div class="h-[1px] w-24 bg-[#C5A880]/40 mt-8"></div>
+                    <div class="h-1 w-12 bg-purple-300 rounded"></div>
                 </div>
 
-                <!-- 오른쪽 브랜드 정밀 디스크립션 -->
-                <div class="lg:col-span-8 space-y-8 text-stone-400 font-light leading-relaxed text-sm md:text-base">
+                <!-- 오른쪽 설명 영역 (자체 기술력 강조 및 외부 파트너십/특정 엔진 브랜드 제거) -->
+                <div class="lg:col-span-7 space-y-6 text-slate-600 text-sm md:text-base leading-relaxed">
                     <p>
-                        동양 철학의 최고 정점인 명리학은 단순한 예측 시스템이 아닙니다. 한 인간이 태어난 시점의 시공간 에너지를 8개의 고유 코드로 압축해 낸 정교한 데이터 시스템입니다. DITTO AI는 이 고전 데이터 체계를 현대 심리학의 성향 매트릭스 및 머신러닝 임베딩 기법과 완벽하게 크로싱하여 미신이 아닌 하나의 **‘행동 설계 데이터 과학’**으로 입증해 냅니다.
+                        한 사람이 세상에 태어난 시점의 시공간 에너지를 뜻하는 사주팔자. DITTO AI는 이 복잡하고 어려운 역학 텍스트를 현대 심리학과 정교한 자체 행동 분석 알고리즘으로 알기 쉽게 정렬했습니다.
                     </p>
                     <p>
-                        Google의 최신 대형 언어 모델인 **Gemini 2.5 Flash**를 내부에 결합하여, 딱딱하고 기계적인 한자 풀이식 해석을 완전히 덜어냈습니다. 개인의 현실적인 현생 고민과 미묘한 심경의 흐름까지 럭셔리한 카운셀링 대화체로 정밀 해독하는 우수한 기술적 성과를 완성해 냈습니다.
+                        우리는 딱딱하고 위협적인 운세 풀이 대신, DITTO AI가 독자적으로 튜닝한 자체 명리 분석 파이프라인과 다정하고 섬세하게 설계된 카운셀링 로직을 활용하여 따뜻한 위로와 일상의 구체적인 실천 방안을 제시하는 마음 파트너로 동행합니다.
                     </p>
-
-                    <!-- 미니멀 수치 프레임 그리드 -->
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pt-8 border-t border-stone-900 text-left">
-                        <div>
-                            <div class="font-cinzel text-2xl text-white font-medium">99.7%</div>
-                            <div class="text-[10px] tracking-[0.1em] text-stone-500 mt-2 uppercase font-orbitron">Mapping Accuracy</div>
-                        </div>
-                        <div>
-                            <div class="font-cinzel text-2xl text-white font-medium">18,400+</div>
-                            <div class="text-[10px] tracking-[0.1em] text-stone-500 mt-2 uppercase font-orbitron">Trained Archetypes</div>
-                        </div>
-                        <div>
-                            <div class="font-cinzel text-2xl text-white font-medium">Under 1.2s</div>
-                            <div class="text-[10px] tracking-[0.1em] text-stone-500 mt-2 uppercase font-orbitron">Real-time Inference</div>
-                        </div>
-                    </div>
                 </div>
 
             </div>
         </div>
     </section>
 
-    <!-- 핵심 시스템 아키텍처 (Pillars Lineup) -->
-    <section id="tech" class="py-32 border-t border-stone-900 relative z-10">
-        <div class="max-w-7xl mx-auto px-8">
-            <div class="text-center space-y-4 mb-24">
-                <span class="font-cinzel text-xs tracking-[0.3em] text-[#C5A880]">02 / 시스템 아키텍처</span>
-                <h2 class="text-3xl md:text-5xl font-playfair font-light italic text-white">인생 예측 시스템의 세 가지 기둥</h2>
-                <div class="h-[1px] w-20 bg-stone-800 mx-auto mt-6"></div>
+    <!-- 핵심 솔루션 요약 (Three Pillars) -->
+    <section id="tech" class="py-24 border-t border-purple-100 relative z-10">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="text-center space-y-3 mb-16">
+                <span class="text-xs font-bold text-purple-500 uppercase tracking-widest font-nunito">02 / FEATURES</span>
+                <h2 class="text-2xl md:text-4xl font-gowun font-bold text-slate-800">디토와 함께하는 간결한 인생 탐구</h2>
             </div>
 
-            <!-- 미니멀 플레이트 3단 카드 레이아웃 -->
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- 파스텔 톤 3단 카드 -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
                 
-                <!-- 카드 I -->
-                <div class="luxury-border p-8 bg-[#090909]/40 relative group">
-                    <div class="font-cinzel text-xs text-stone-500 tracking-[0.2em] mb-12">제 1 엔진</div>
-                    <h3 class="font-cinzel text-lg text-[#C5A880] mb-4 tracking-wider">DITTO 명리 엔진</h3>
-                    <p class="text-stone-400 text-xs font-light leading-relaxed mb-8">
-                        전통 만세력 좌표계를 실수 매핑 데이터 체계로 정량 계산하고, 기후학적 보정 가중치를 더해 오행 분포와 에너지적 조화도를 수치 진단하는 핵심 기술입니다.
-                    </p>
-                    <div class="absolute bottom-8 right-8 text-stone-600 group-hover:text-[#C5A880] transition-colors">
-                        <i class="fa-solid fa-yin-yang text-xl animate-spin-slow"></i>
+                <!-- 카드 1 -->
+                <div class="cloud-card p-6 text-center">
+                    <div class="w-12 h-12 rounded-full bg-purple-100 text-purple-500 flex items-center justify-center text-lg mx-auto mb-6">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
                     </div>
+                    <h3 class="font-gowun font-bold text-base text-slate-800 mb-2">간편한 명리 연산</h3>
+                    <p class="text-slate-500 text-xs leading-relaxed">복잡한 절차 없이 태어난 시각 정보만으로 오행의 조화도를 단숨에 분석합니다.</p>
                 </div>
 
-                <!-- 카드 II -->
-                <div class="luxury-border p-8 bg-[#090909]/40 relative group">
-                    <div class="font-cinzel text-xs text-stone-500 tracking-[0.2em] mb-12">제 2 엔진</div>
-                    <h3 class="font-cinzel text-lg text-[#C5A880] mb-4 tracking-wider">자미 성반 행렬기</h3>
-                    <p class="text-stone-400 text-xs font-light leading-relaxed mb-8">
-                        개인의 우주적 배치를 표현하는 12궁과 백여 개에 달하는 천성들의 각도적 교차점을 인덱싱하여, 삶의 입체적 지도인 성반(星盤)을 격국화하여 동적 생성합니다.
-                    </p>
-                    <div class="absolute bottom-8 right-8 text-stone-600 group-hover:text-[#C5A880] transition-colors">
-                        <i class="fa-solid fa-moon text-xl"></i>
+                <!-- 카드 2 -->
+                <div class="cloud-card p-6 text-center">
+                    <div class="w-12 h-12 rounded-full bg-pink-100 text-pink-500 flex items-center justify-center text-lg mx-auto mb-6">
+                        <i class="fa-solid fa-moon"></i>
                     </div>
+                    <h3 class="font-gowun font-bold text-base text-slate-800 mb-2">자미두수 시각 매핑</h3>
+                    <p class="text-slate-500 text-xs leading-relaxed">밤하늘을 빛내는 별들의 정렬 형태에 내 성향을 매칭해 그림 카드로 보기 좋게 보여줍니다.</p>
                 </div>
 
-                <!-- 카드 III -->
-                <div class="luxury-border p-8 bg-[#090909]/40 relative group">
-                    <div class="font-cinzel text-xs text-stone-500 tracking-[0.2em] mb-12">제 3 엔진</div>
-                    <h3 class="font-cinzel text-lg text-[#C5A880] mb-4 tracking-wider">현자 심리학 언어 모델</h3>
-                    <p class="text-stone-400 text-xs font-light leading-relaxed mb-8">
-                        주역과 도덕경을 포함한 고전 원서 코퍼스 및 임상 심리 분석 가이드를 학습 및 파인튜닝하여, 건조하고 모호한 풀이 대신 품격 있고 마음을 채우는 조언을 추출합니다.
-                    </p>
-                    <div class="absolute bottom-8 right-8 text-stone-600 group-hover:text-[#C5A880] transition-colors">
-                        <i class="fa-solid fa-scroll text-xl"></i>
+                <!-- 카드 3 -->
+                <div class="cloud-card p-6 text-center">
+                    <div class="w-12 h-12 rounded-full bg-yellow-100 text-yellow-600 flex items-center justify-center text-lg mx-auto mb-6">
+                        <i class="fa-solid fa-hand-holding-heart"></i>
                     </div>
+                    <h3 class="font-gowun font-bold text-base text-slate-800 mb-2">마음 친화적 조언</h3>
+                    <p class="text-slate-500 text-xs leading-relaxed">자사 카운셀링 언어 모델이 불필요한 한자어는 버리고 오늘 나에게 꼭 필요한 다정한 문장만을 건넵니다.</p>
                 </div>
 
             </div>
         </div>
     </section>
 
-    <!-- 인터랙티브 체험 구역 (Norell Premium App UX) -->
-    <section id="test-report-zone" class="py-32 border-t border-stone-900 bg-[#070707]/40 relative z-10">
-        <div class="max-w-7xl mx-auto px-8">
-            <div class="text-center space-y-4 mb-20">
-                <span class="font-cinzel text-xs tracking-[0.3em] text-[#C5A880]">03 / 대화형 자아 도구</span>
-                <h2 class="text-3xl md:text-5xl font-playfair font-light italic text-white">나의 우주적 명반 진단하기</h2>
-                <p class="text-stone-400 text-xs max-w-lg mx-auto tracking-wide">얇고 미려한 그리드 라인 속에 렌더링되는 사주원국 및 4대 핵심 운세 분석 리포트</p>
-                <div class="h-[1px] w-20 bg-stone-800 mx-auto mt-6"></div>
+    <!-- 인터랙티브 체험 구역 (Pastel Dream App) -->
+    <section id="test-report-zone" class="py-24 border-t border-purple-100 bg-[#fbfbfe]/60 relative z-10">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="text-center space-y-3 mb-16">
+                <span class="text-xs font-bold text-purple-500 uppercase tracking-widest font-nunito">03 / APPLICATION</span>
+                <h2 class="text-2xl md:text-4xl font-gowun font-bold text-slate-800">나만을 위한 특별한 리포트 뽑기</h2>
+                <p class="text-slate-500 text-xs">이름과 시간을 입력하고 나만의 4대 핵심 운세 카드를 만나보세요.</p>
             </div>
 
-            <!-- 앱 메인 콘테이너 -->
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start max-w-5xl mx-auto">
+            <!-- 앱 메인 양면 그리드 -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start max-w-4xl mx-auto">
                 
-                <!-- 입력부 (왼쪽) -->
-                <div class="lg:col-span-5 luxury-border bg-[#090909]/80 p-8 space-y-6">
-                    <h3 class="font-cinzel text-sm text-[#C5A880] tracking-[0.2em] uppercase border-b border-stone-800 pb-3 flex items-center gap-2">
-                        <i class="fa-solid fa-fingerprint"></i> 사주 분석 변수 설정
+                <!-- 입력 패널 (왼쪽) -->
+                <div class="lg:col-span-5 cloud-card p-6 space-y-6">
+                    <h3 class="font-gowun text-sm text-purple-600 font-bold border-b border-purple-100 pb-3 flex items-center gap-2">
+                        <i class="fa-solid fa-heart-pulse"></i> 정보 주입하기
                     </h3>
                     
-                    <div class="space-y-4 text-xs tracking-wider">
+                    <div class="space-y-4 text-xs font-semibold text-slate-600">
                         <div>
-                            <label class="block text-stone-400 mb-2">이름</label>
-                            <input id="user-name" type="text" placeholder="이름을 입력해 주세요" class="w-full px-4 py-3 text-sm">
+                            <label class="block mb-2 text-stone-500">이름</label>
+                            <input id="user-name" type="text" placeholder="예: 경진" class="w-full px-4 py-3 text-sm focus:border-purple-400 focus:ring-1 focus:ring-purple-400">
                         </div>
 
                         <div>
-                            <label class="block text-stone-400 mb-2">태어난 날짜 (양력)</label>
-                            <input id="user-date" type="date" value="2000-11-15" class="w-full px-4 py-3 text-sm">
+                            <label class="block mb-2 text-stone-500">태어난 날짜 (양력)</label>
+                            <input id="user-date" type="date" value="2000-11-15" class="w-full px-4 py-3 text-sm focus:border-purple-400 focus:ring-1 focus:ring-purple-400">
                         </div>
 
                         <div>
-                            <label class="block text-stone-400 mb-2">태어난 시간</label>
-                            <select id="user-time" class="w-full px-4 py-3 text-sm">
-                                <option value="사시 (09:30~11:29)">사시 (巳時) — 오전 09시 30분 ~ 오전 11시 29분</option>
-                                <option value="자시 (23:30~01:29)">자시 (子時) — 밤 11시 30분 ~ 새벽 01시 29분</option>
-                                <option value="축시 (01:30~03:29)">축시 (丑時) — 새벽 01시 30분 ~ 새벽 03시 29분</option>
-                                <option value="인시 (03:30~05:29)">인시 (寅時) — 새벽 03시 30분 ~ 새벽 05시 29분</option>
-                                <option value="묘시 (05:30~07:29)">묘시 (卯時) — 아침 05시 30분 ~ 아침 07시 29분</option>
-                                <option value="진시 (07:30~09:29)">진시 (辰時) — 아침 07시 30분 ~ 오전 09시 29분</option>
-                                <option value="오시 (11:30~13:29)">오시 (午時) — 오전 11시 30분 ~ 오후 01시 29분</option>
-                                <option value="미시 (13:30~15:29)">미시 (未時) — 오후 01시 30분 ~ 오후 03시 29분</option>
-                                <option value="신시 (15:30~17:29)">신시 (申時) — 오후 03시 30분 ~ 오후 05시 29분</option>
-                                <option value="유시 (17:30~19:29)">유시 (酉時) — 오후 05시 30분 ~ 저녁 07시 29분</option>
-                                <option value="술시 (19:30~21:29)">술시 (戌時) — 저녁 07시 30분 ~ 밤 09시 29분</option>
-                                <option value="해시 (21:30~23:29)">해시 (亥時) — 밤 09시 30분 ~ 밤 11시 29분</option>
+                            <label class="block mb-2 text-stone-500">태어난 시간대</label>
+                            <select id="user-time" class="w-full px-4 py-3 text-sm focus:border-purple-400 focus:ring-1 focus:ring-purple-400">
+                                <option value="사시 (09:30~11:29)">사시 (巳時) — 오전 9시 30분 ~ 오전 11시 29분</option>
+                                <option value="자시 (23:30~01:29)">자시 (子時) — 밤 11시 30분 ~ 새벽 1시 29분</option>
+                                <option value="축시 (01:30~03:29)">축시 (丑時) — 새벽 1시 30분 ~ 새벽 3시 29분</option>
+                                <option value="인시 (03:30~05:29)">인시 (寅時) — 새벽 3시 30분 ~ 새벽 5시 29분</option>
+                                <option value="묘시 (05:30~07:29)">묘시 (卯時) — 아침 5시 30분 ~ 아침 7시 29분</option>
+                                <option value="진시 (07:30~09:29)">진시 (辰時) — 아침 7시 30분 ~ 오전 9시 29분</option>
+                                <option value="오시 (11:30~13:29)">오시 (午時) — 오전 11시 30분 ~ 오후 1시 29분</option>
+                                <option value="미시 (13:30~15:29)">미시 (未時) — 오후 1시 30분 ~ 오후 3시 29분</option>
+                                <option value="신시 (15:30~17:29)">신시 (申時) — 오후 3시 30분 ~ 오후 5시 29분</option>
+                                <option value="유시 (17:30~19:29)">유시 (酉時) — 오후 5시 30분 ~ 저녁 7시 29분</option>
+                                <option value="술시 (19:30~21:29)">술시 (戌時) — 저녁 7시 30분 ~ 밤 9시 29분</option>
+                                <option value="해시 (21:30~23:29)">해시 (亥時) — 밤 9시 30분 ~ 밤 11시 29분</option>
                             </select>
                         </div>
 
-                        <div class="flex gap-6 pt-2">
-                            <label class="inline-flex items-center text-[10px] text-stone-400 cursor-pointer uppercase tracking-widest">
-                                <input type="radio" name="sex" value="M" checked class="form-radio text-[#C5A880] focus:ring-stone-600 h-3 w-3">
-                                <span class="ml-2">남성 (乾命)</span>
+                        <div class="flex gap-4 pt-2 justify-center">
+                            <label class="inline-flex items-center text-[11px] text-stone-500 cursor-pointer">
+                                <input type="radio" name="sex" value="M" checked class="form-radio text-purple-500 focus:ring-purple-300 h-3.5 w-3.5">
+                                <span class="ml-1.5">남성 (乾命)</span>
                             </label>
-                            <label class="inline-flex items-center text-[10px] text-stone-400 cursor-pointer uppercase tracking-widest">
-                                <input type="radio" name="sex" value="F" class="form-radio text-[#C5A880] focus:ring-stone-600 h-3 w-3">
-                                <span class="ml-2">여성 (坤命)</span>
+                            <label class="inline-flex items-center text-[11px] text-stone-500 cursor-pointer">
+                                <input type="radio" name="sex" value="F" class="form-radio text-purple-500 focus:ring-purple-300 h-3.5 w-3.5">
+                                <span class="ml-1.5">여성 (坤命)</span>
                             </label>
                         </div>
                     </div>
 
-                    <button type="button" id="mystic-trigger-btn" class="w-full bg-[#C5A880] hover:bg-white text-black font-semibold py-4 text-xs uppercase tracking-[0.2em] transition-all duration-500">
-                        천명 매트릭스 변환하기
+                    <button type="button" id="mystic-trigger-btn" class="w-full bg-gradient-to-r from-purple-400 to-pink-400 hover:opacity-90 text-white font-bold py-3.5 text-xs tracking-wider round-btn shadow-md transition">
+                        나의 운세 리포트 뽑기
                     </button>
                 </div>
 
-                <!-- 출력부 (오른쪽: Norell Premium Card Layout) -->
+                <!-- 출력 리포트 패널 (오른쪽) -->
                 <div class="lg:col-span-7 flex flex-col items-center w-full">
                     
-                    <!-- 극단적 미니멀 상단 가이드 라벨 -->
-                    <div class="flex space-x-6 border-b border-stone-800 pb-3 mb-8 text-[11px] uppercase tracking-[0.15em] w-full justify-between items-center">
-                        <span class="text-stone-400 font-semibold">CELESTIAL REPORT CARD</span>
-                        <span class="text-[#C5A880] font-orbitron text-[10px]">DITTO AI ORACLE</span>
-                    </div>
-
-                    <!-- 대기 상태 프레임 -->
-                    <div id="mystic-wait" class="w-full min-h-[450px] flex flex-col items-center justify-center text-center space-y-6 luxury-border bg-[#090909]/20 p-8">
-                        <div class="w-12 h-12 rounded-full border border-[#C5A880]/30 flex items-center justify-center text-[#C5A880] animate-pulse">
-                            <i class="fa-solid fa-moon text-sm"></i>
+                    <!-- 대기 상태 (소프트 카드) -->
+                    <div id="mystic-wait" class="w-full min-h-[460px] flex flex-col items-center justify-center text-center space-y-6 cloud-card p-8">
+                        <div class="w-14 h-14 rounded-full bg-purple-50 flex items-center justify-center text-purple-400 animate-pulse">
+                            <i class="fa-solid fa-sun text-xl"></i>
                         </div>
-                        <div class="space-y-2">
-                            <h4 class="font-cinzel text-xs tracking-[0.2em] text-white">명반 산출 대기</h4>
-                            <p class="text-[11px] text-stone-500 max-w-xs mx-auto leading-relaxed">이름과 탄생 일시를 입력하신 뒤 산출 버튼을 누르면, 4대 핵심 운세(종합·연애·재물·취업)가 정밀 분석되어 생성됩니다.</p>
-                        </div>
-                    </div>
-
-                    <!-- 계산 로딩 프레임 -->
-                    <div id="mystic-loading" class="hidden w-full min-h-[450px] flex flex-col items-center justify-center text-center space-y-6 luxury-border bg-[#090909]/20 p-8">
-                        <div class="w-10 h-10 border border-t-transparent border-[#C5A880] rounded-full animate-spin"></div>
                         <div class="space-y-1">
-                            <h4 class="font-cinzel text-xs tracking-[0.2em] text-white">궤도 좌표 보정 및 분석 연산 중</h4>
-                            <p class="text-[10px] text-[#C5A880] font-orbitron tracking-widest animate-pulse" id="loading-txt">만세력 간지 변환 실행 중...</p>
+                            <h4 class="font-gowun text-sm font-bold text-slate-800">명반 분석실 문 열기</h4>
+                            <p class="text-xs text-slate-500 max-w-xs mx-auto leading-relaxed">이름을 기입하신 뒤 운세 버튼을 눌러보세요. 귀엽고 한눈에 쏙 들어오는 4대 핵심 분석 카드가 동적으로 열립니다.</p>
                         </div>
                     </div>
 
-                    <!-- 4대 운세 종합 리포트 카드 패널 (Norell 에디토리얼 스타일 구현) -->
-                    <div id="poster-report-card" class="hidden w-full luxury-border bg-[#090909]/80 p-8 space-y-8 relative">
+                    <!-- 로딩 상태 -->
+                    <div id="mystic-loading" class="hidden w-full min-h-[460px] flex flex-col items-center justify-center text-center space-y-4 cloud-card p-8">
+                        <div class="w-10 h-10 border-4 border-purple-200 border-t-purple-500 rounded-full animate-spin"></div>
+                        <div class="space-y-1">
+                            <h4 class="font-gowun text-sm font-bold text-slate-800">우주 에너지 정렬 중</h4>
+                            <p class="text-[10px] text-purple-500 font-bold tracking-widest animate-pulse" id="loading-txt">사주 변환 연산 진행...</p>
+                        </div>
+                    </div>
+
+                    <!-- 4대 운세 리포트 -->
+                    <div id="poster-report-card" class="hidden w-full cloud-card p-6 md:p-8 space-y-6 relative border-t-8 border-t-purple-400">
                         
-                        <!-- 카드 해더 구조 -->
-                        <div class="flex justify-between items-end border-b border-stone-800 pb-5">
+                        <!-- 헤더 정보 -->
+                        <div class="flex justify-between items-center border-b border-purple-100 pb-4">
                             <div>
-                                <span class="text-[9px] tracking-[0.3em] uppercase text-[#C5A880] font-cinzel">DESTINY METRICS</span>
-                                <h3 class="text-xl font-normal text-white mt-1" id="res-user-header">경진 님의 정밀 명반</h3>
-                                <p id="target-birth-desc" class="text-[10px] text-stone-400 font-orbitron mt-1">2000.11.15 / AM 09:58</p>
+                                <h3 class="text-lg font-gowun font-bold text-slate-800" id="res-user-header">경진 님의 정밀 명조</h3>
+                                <p id="target-birth-desc" class="text-[11px] text-purple-500 font-semibold mt-1">2000.11.15 / 오전 9시 58분생</p>
                             </div>
                             <div class="text-right">
-                                <span class="text-[9px] tracking-[0.2em] uppercase text-stone-500 font-orbitron">DITTO ORACLE v2.5</span>
-                                <div class="text-[10px] font-semibold text-[#C5A880] mt-1 tracking-widest uppercase">REAL-TIME INF</div>
+                                <span class="text-[9px] bg-pink-100 text-pink-600 font-bold px-2.5 py-1 rounded-full uppercase">DITTO AI ORACLE</span>
                             </div>
                         </div>
 
-                        <!-- 사주 원국표 -->
-                        <div class="space-y-3">
-                            <span class="text-[9px] tracking-[0.2em] uppercase text-stone-500 font-cinzel">명조 원국 (四柱)</span>
-                            <div class="grid grid-cols-4 gap-4 text-center">
-                                <div class="border border-stone-800/80 p-3 bg-stone-950/20">
-                                    <div class="text-[9px] tracking-wider text-stone-500">시주(時)</div>
-                                    <div class="text-sm font-semibold text-[#C5A880] mt-1" id="saju-hour">사시</div>
+                        <!-- 사주 원국 -->
+                        <div class="space-y-2">
+                            <span class="text-[10px] font-bold text-purple-600 block">🌟 나의 사주 핵심 글자</span>
+                            <div class="grid grid-cols-4 gap-2 text-center text-xs">
+                                <div class="bg-purple-50/60 p-2.5 rounded-xl border border-white">
+                                    <div class="text-[9px] text-slate-400">태어난 시간</div>
+                                    <div class="font-bold text-purple-600 mt-1 text-sm" id="saju-hour">사시</div>
                                 </div>
-                                <div class="border border-stone-800/80 p-3 bg-stone-950/20">
-                                    <div class="text-[9px] tracking-wider text-stone-500">일주(日)</div>
-                                    <div class="text-sm font-semibold text-white mt-1" id="saju-day">임술</div>
+                                <div class="bg-pink-50/40 p-2.5 rounded-xl border border-white">
+                                    <div class="text-[9px] text-slate-400">태어난 날</div>
+                                    <div class="font-bold text-pink-500 mt-1 text-sm" id="saju-day">임술</div>
                                 </div>
-                                <div class="border border-stone-800/80 p-3 bg-stone-950/20">
-                                    <div class="text-[9px] tracking-wider text-stone-500">월주(月)</div>
-                                    <div class="text-sm font-semibold text-stone-300 mt-1" id="saju-month">정해</div>
+                                <div class="bg-purple-50/60 p-2.5 rounded-xl border border-white">
+                                    <div class="text-[9px] text-slate-400">태어난 달</div>
+                                    <div class="font-bold text-slate-700 mt-1 text-sm" id="saju-month">정해</div>
                                 </div>
-                                <div class="border border-stone-800/80 p-3 bg-stone-950/20">
-                                    <div class="text-[9px] tracking-wider text-stone-500">년주(年)</div>
-                                    <div class="text-sm font-semibold text-stone-300 mt-1" id="saju-year">경진</div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- 오행 분석 흐름판 -->
-                        <div class="space-y-3">
-                            <span class="text-[9px] tracking-[0.2em] uppercase text-stone-500 font-cinzel">오행 기운의 조화</span>
-                            <div class="grid grid-cols-5 gap-3 text-center text-xs" id="five-elements-box">
-                                <div class="border border-stone-800 p-2.5">
-                                    <div class="text-blue-300"><i class="fa-solid fa-droplet text-xs"></i></div>
-                                    <div class="text-stone-300 font-bold mt-1 text-[11px]">수(水)</div>
-                                    <div class="text-[9px] text-stone-500 mt-0.5" id="elem-water">강함</div>
-                                </div>
-                                <div class="border border-stone-800 p-2.5">
-                                    <div class="text-red-400"><i class="fa-solid fa-fire text-xs"></i></div>
-                                    <div class="text-stone-300 font-bold mt-1 text-[11px]">화(火)</div>
-                                    <div class="text-[9px] text-stone-500 mt-0.5" id="elem-fire">존재</div>
-                                </div>
-                                <div class="border border-stone-800 p-2.5">
-                                    <div class="text-amber-500"><i class="fa-solid fa-mountain text-xs"></i></div>
-                                    <div class="text-stone-300 font-bold mt-1 text-[11px]">토(土)</div>
-                                    <div class="text-[9px] text-stone-500 mt-0.5" id="elem-earth">보조</div>
-                                </div>
-                                <div class="border border-stone-800 p-2.5">
-                                    <div class="text-stone-400"><i class="fa-solid fa-coins text-xs"></i></div>
-                                    <div class="text-stone-300 font-bold mt-1 text-[11px]">금(金)</div>
-                                    <div class="text-[9px] text-stone-500 mt-0.5" id="elem-metal">보조</div>
-                                </div>
-                                <div class="border border-stone-800 p-2.5">
-                                    <div class="text-green-400"><i class="fa-solid fa-tree text-xs"></i></div>
-                                    <div class="text-stone-300 font-bold mt-1 text-[11px]">목(木)</div>
-                                    <div class="text-[9px] text-stone-500 mt-0.5" id="elem-wood">약함</div>
+                                <div class="bg-purple-50/60 p-2.5 rounded-xl border border-white">
+                                    <div class="text-[9px] text-slate-400">태어난 해</div>
+                                    <div class="font-bold text-slate-700 mt-1 text-sm" id="saju-year">경진</div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- 4대 핵심 운세 리포트 영역 -->
-                        <div class="space-y-6 pt-4 border-t border-stone-900">
-                            <span class="text-[9px] tracking-[0.2em] uppercase text-[#C5A880] font-cinzel block mb-2">4대 핵심 운세 분석 (Destiny Analysis)</span>
+                        <!-- 오행 기운 균형도 -->
+                        <div class="space-y-2.5">
+                            <span class="text-[10px] font-bold text-purple-600 block">🌿 오행 분포</span>
+                            <div class="grid grid-cols-5 gap-2 text-center text-xs">
+                                <div class="bg-blue-50/50 p-2 rounded-xl">
+                                    <div class="text-blue-400 text-sm"><i class="fa-solid fa-droplet"></i></div>
+                                    <div class="text-slate-700 font-bold mt-1 text-[11px]">물(水)</div>
+                                    <div class="text-[9px] text-blue-500 font-semibold" id="elem-water">강함</div>
+                                </div>
+                                <div class="bg-red-50/50 p-2 rounded-xl">
+                                    <div class="text-red-400 text-sm"><i class="fa-solid fa-fire"></i></div>
+                                    <div class="text-slate-700 font-bold mt-1 text-[11px]">불(火)</div>
+                                    <div class="text-[9px] text-red-500 font-semibold" id="elem-fire">존재</div>
+                                </div>
+                                <div class="bg-amber-50/50 p-2 rounded-xl">
+                                    <div class="text-amber-500 text-sm"><i class="fa-solid fa-mountain"></i></div>
+                                    <div class="text-slate-700 font-bold mt-1 text-[11px]">흙(土)</div>
+                                    <div class="text-[9px] text-amber-600 font-semibold" id="elem-earth">보조</div>
+                                </div>
+                                <div class="bg-slate-50 p-2 rounded-xl">
+                                    <div class="text-slate-400 text-sm"><i class="fa-solid fa-coins"></i></div>
+                                    <div class="text-slate-700 font-bold mt-1 text-[11px]">쇠(金)</div>
+                                    <div class="text-[9px] text-slate-500 font-semibold" id="elem-metal">보조</div>
+                                </div>
+                                <div class="bg-green-50/50 p-2 rounded-xl">
+                                    <div class="text-green-500 text-sm"><i class="fa-solid fa-tree"></i></div>
+                                    <div class="text-slate-700 font-bold mt-1 text-[11px]">나무(木)</div>
+                                    <div class="text-[9px] text-green-600 font-semibold" id="elem-wood">약함</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 4대 운세 영역 (간결한 카드 뉴스 스타일 가독성 극대화) -->
+                        <div class="space-y-3 pt-3 border-t border-purple-100">
+                            <span class="text-[10px] font-bold text-purple-600 block">🔮 4대 핵심 행동 진단</span>
                             
-                            <div class="space-y-4">
-                                <!-- 종합운 카드 -->
-                                <div class="border border-stone-800 p-5 bg-stone-950/20 rounded-lg">
-                                    <div class="flex justify-between items-center mb-2">
-                                        <h4 class="text-xs font-semibold text-white flex items-center gap-2">
-                                            <i class="fa-solid fa-compass text-[#C5A880]"></i> 🔮 종합운
-                                        </h4>
-                                        <span class="text-[10px] font-orbitron text-[#C5A880]" id="score-overall">지수 92%</span>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-3.5">
+                                <!-- 종합운 -->
+                                <div class="p-4 bg-white border border-purple-100/60 rounded-2xl">
+                                    <div class="flex justify-between items-center mb-1">
+                                        <h4 class="text-xs font-bold text-slate-800"><i class="fa-solid fa-star text-yellow-400 mr-1"></i> 종합운</h4>
+                                        <span class="text-[10px] font-bold text-purple-500" id="score-overall">92%</span>
                                     </div>
-                                    <p class="text-xs text-stone-300 font-light leading-relaxed pl-5" id="desc-overall">
-                                        사주 상 핵심 용신 기운이 적시에 작용하여 올해 전반적으로 큰 변곡점을 그립니다. 자기 주도적 흐름을 단단하게 확보하여 주위의 긍정적 평판과 물질적 안정을 조화롭게 성취할 시나리오입니다.
-                                    </p>
+                                    <p class="text-[11px] text-slate-500 leading-relaxed font-light" id="desc-overall">지혜로운 기운이 흐르는 해입니다. 훌륭한 아이디어가 행동으로 이어져 삶에 만족스러운 균형을 안겨줍니다.</p>
                                 </div>
 
-                                <!-- 연애운 카드 -->
-                                <div class="border border-stone-800 p-5 bg-stone-950/20 rounded-lg">
-                                    <div class="flex justify-between items-center mb-2">
-                                        <h4 class="text-xs font-semibold text-white flex items-center gap-2">
-                                            <i class="fa-solid fa-heart text-[#C5A880]"></i> ❤️ 연애운
-                                        </h4>
-                                        <span class="text-[10px] font-orbitron text-[#C5A880]" id="score-love">지수 88%</span>
+                                <!-- 연애운 -->
+                                <div class="p-4 bg-white border border-purple-100/60 rounded-2xl">
+                                    <div class="flex justify-between items-center mb-1">
+                                        <h4 class="text-xs font-bold text-slate-800"><i class="fa-solid fa-heart text-pink-400 mr-1"></i> 연애운</h4>
+                                        <span class="text-[10px] font-bold text-pink-500" id="score-love">88%</span>
                                     </div>
-                                    <p class="text-xs text-stone-300 font-light leading-relaxed pl-5" id="desc-love">
-                                        부처궁과 일지의 상생작용으로 인해 한 사람을 차분히 살피고 오랜 신뢰 끝에 깊은 호감을 나누는 안정적 인연운이 발현됩니다. 가벼운 만남보다 영적으로 공명하는 진중한 성격을 가진 상대를 맞이하게 됩니다.
-                                    </p>
+                                    <p class="text-[11px] text-slate-500 leading-relaxed font-light" id="desc-love">신중함이 무기입니다. 첫눈에 반하기보다 천천히 알아가며 깊어지는 다정한 인연이 조력자로 안착합니다.</p>
                                 </div>
 
-                                <!-- 재물운 카드 -->
-                                <div class="border border-stone-800 p-5 bg-stone-950/20 rounded-lg">
-                                    <div class="flex justify-between items-center mb-2">
-                                        <h4 class="text-xs font-semibold text-white flex items-center gap-2">
-                                            <i class="fa-solid fa-wallet text-[#C5A880]"></i> 💰 재물운
-                                        </h4>
-                                        <span class="text-[10px] font-orbitron text-[#C5A880]" id="score-wealth">지수 85%</span>
+                                <!-- 재물운 -->
+                                <div class="p-4 bg-white border border-purple-100/60 rounded-2xl">
+                                    <div class="flex justify-between items-center mb-1">
+                                        <h4 class="text-xs font-bold text-slate-800"><i class="fa-solid fa-wallet text-amber-500 mr-1"></i> 재물운</h4>
+                                        <span class="text-[10px] font-bold text-amber-500" id="score-wealth">85%</span>
                                     </div>
-                                    <p class="text-xs text-stone-300 font-light leading-relaxed pl-5" id="desc-wealth">
-                                        재성(財星)의 안정화 단계가 전개되어 지출 관리가 영리하게 진행되며 탄탄한 기반 투자의 적기를 맞이합니다. 상반기의 계획적 설계가 하반기 수확과 재정적 안착으로 자연스레 수렴됩니다.
-                                    </p>
+                                    <p class="text-[11px] text-slate-500 leading-relaxed font-light" id="desc-wealth">투기적 지출을 스마트하게 통제해 나가는 시기입니다. 계획적인 자산 축적이 하반기 큰 만족으로 돌아옵니다.</p>
                                 </div>
 
-                                <!-- 취업운 카드 -->
-                                <div class="border border-stone-800 p-5 bg-stone-950/20 rounded-lg">
-                                    <div class="flex justify-between items-center mb-2">
-                                        <h4 class="text-xs font-semibold text-white flex items-center gap-2">
-                                            <i class="fa-solid fa-briefcase text-[#C5A880]"></i> 💼 취업운
-                                        </h4>
-                                        <span class="text-[10px] font-orbitron text-[#C5A880]" id="score-career">지수 90%</span>
+                                <!-- 취업운 -->
+                                <div class="p-4 bg-white border border-purple-100/60 rounded-2xl">
+                                    <div class="flex justify-between items-center mb-1">
+                                        <h4 class="text-xs font-bold text-slate-800"><i class="fa-solid fa-briefcase text-blue-400 mr-1"></i> 취업운</h4>
+                                        <span class="text-[10px] font-bold text-blue-500" id="score-career">90%</span>
                                     </div>
-                                    <p class="text-xs text-stone-300 font-light leading-relaxed pl-5" id="desc-career">
-                                        머리 회전이 기민한 강점이 정밀 가획이나 구조 설계 분야의 우수한 커리어 성취로 연계됩니다. 이직 혹은 전문직 부서로의 도약이 최상의 타이밍을 얻어 성실하고 완벽하게 자리를 잡게 됩니다.
-                                    </p>
+                                    <p class="text-[11px] text-slate-500 leading-relaxed font-light" id="desc-career">기획력과 세밀한 설계 역량이 강점입니다. 내 무기를 최대로 살려줄 새로운 이직 혹은 부서 배치의 기회가 옵니다.</p>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- 인생 핵심 요약판 -->
-                        <div class="border-t border-stone-900 pt-6 space-y-4">
-                            <div class="p-5 border border-[#C5A880]/20 bg-[#0c0c0c]/80 text-center space-y-1">
-                                <p class="text-xs font-bold text-white uppercase tracking-[0.1em]" id="final-summary-1">"차가운 머리 + 뜨거운 종심"</p>
-                                <p class="text-[11px] text-stone-400 font-light" id="final-summary-2">쉽게 무너지지 않는 완벽한 구조형 인간</p>
-                            </div>
+                        <!-- 마인드 총평 한줄요약 -->
+                        <div class="p-4 border border-purple-100 bg-purple-50/40 rounded-2xl text-center space-y-0.5">
+                            <p class="text-xs font-bold text-purple-700" id="final-summary-1">"지혜로운 머리와 따뜻한 결단"</p>
+                            <p class="text-[10px] text-slate-400" id="final-summary-2">내면이 튼튼하여 쉽게 지치지 않는 웰니스형 인재</p>
                         </div>
                     </div>
 
@@ -503,43 +423,43 @@
         </div>
     </section>
 
-    <!-- 베타 체험단 전형 캠페인 (Apply/Contact Form) -->
-    <section id="recruit" class="py-32 border-t border-stone-900 bg-[#070707] relative z-10">
-        <div class="max-w-4xl mx-auto px-8">
-            <div class="luxury-border p-8 md:p-16 bg-[#090909]/80 text-center space-y-10 relative">
+    <!-- 체험단 에디토리얼 신청처 (Apply Section) -->
+    <section id="recruit" class="py-24 border-t border-purple-100 bg-white/40 relative z-10">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="cloud-card p-8 md:p-12 text-center space-y-8 relative">
                 
-                <div class="space-y-4">
-                    <span class="font-cinzel text-xs tracking-[0.3em] text-[#C5A880]">04 / 체험단 신청 프로그램</span>
-                    <h2 class="text-3xl md:text-5xl font-playfair font-light italic text-white">AI 사주 베타 체험단 모집</h2>
-                    <p class="text-stone-400 text-xs max-w-lg mx-auto leading-relaxed">
-                        정식 서비스 배포 이전에 DITTO AI의 사주 융합 매핑 모델과 Gemini 2.5의 초고도 인생 정반 보고서를 무료로 체험하고 분석받으실 핵심 베타 테스터 그룹을 모집합니다.
+                <div class="space-y-2">
+                    <span class="text-xs font-bold text-purple-500 uppercase tracking-widest font-nunito">04 / APPLICATION</span>
+                    <h2 class="text-2xl md:text-4xl font-gowun font-bold text-slate-800">DITTO AI 사주 체험단 모집</h2>
+                    <p class="text-slate-500 text-xs max-w-md mx-auto leading-relaxed">
+                        정식 서비스 준비 전에 나만을 위한 따뜻한 인생 분석 리포트를 무료로 받아보고 피드백을 나눠주실 첫 테스터 동반자를 찾습니다.
                     </p>
                 </div>
 
-                <!-- 혜택 내용 격자 카드 -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-left text-xs max-w-lg mx-auto">
-                    <div class="p-4 border border-stone-800 bg-stone-950/20">
-                        <h4 class="font-bold text-white font-cinzel tracking-widest text-[#C5A880] uppercase">01. 프리미엄 명반 패키지</h4>
-                        <p class="text-[11px] text-stone-400 mt-1">대운의 향후 분기점과 자미두수 종합 포국이 일목요연하게 정리된 전문가용 PDF 성명서 증정.</p>
+                <!-- 혜택 내용 카드뉴스 요약 -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-left text-xs max-w-md mx-auto">
+                    <div class="p-4 bg-white border border-purple-100 rounded-2xl">
+                        <h4 class="font-bold text-purple-600 uppercase">🎁 정밀 리포트 PDF 제공</h4>
+                        <p class="text-[10px] text-slate-400 mt-1">대운의 분석도가 보기 좋게 패키징된 PDF 파일을 선물해 드립니다.</p>
                     </div>
-                    <div class="p-4 border border-stone-800 bg-stone-950/20">
-                        <h4 class="font-bold text-white font-cinzel tracking-widest text-[#C5A880] uppercase">02. 1:1 디렉팅 상담 피드백</h4>
-                        <p class="text-[11px] text-stone-400 mt-1">Gemini 2.5 기술 파이프라인 기반으로 진행되는 이직, 창업, 계약 등의 비즈니스 행동 골든타임 컨설팅 부여.</p>
+                    <div class="p-4 bg-white border border-purple-100 rounded-2xl">
+                        <h4 class="font-bold text-purple-600 uppercase">💬 라이브 피드백 참여</h4>
+                        <p class="text-[10px] text-slate-400 mt-1">이직, 학업 등의 중요 이벤트를 AI 파이프라인으로 맞춤 교정 조언.</p>
                     </div>
                 </div>
 
-                <!-- 제출 폼 양식 -->
-                <form id="recruit-form" class="max-w-md mx-auto text-left space-y-6 text-xs tracking-wider">
+                <!-- 간단한 신청서 양식 -->
+                <form id="recruit-form" class="max-w-xs mx-auto text-left space-y-4 text-xs">
                     <div>
-                        <label class="block text-stone-400 mb-2 font-semibold">이메일 주소 또는 연락망</label>
-                        <input type="text" required placeholder="name@domain.com" class="w-full px-4 py-3">
+                        <label class="block text-slate-500 mb-1.5 font-bold">이메일 주소</label>
+                        <input type="text" required placeholder="name@domain.com" class="w-full px-4 py-2.5 rounded-full border border-purple-100">
                     </div>
                     <div>
-                        <label class="block text-stone-400 mb-2 font-semibold">체험단 참가 희망 사유 및 당면한 핵심 고민</label>
-                        <textarea rows="3" required placeholder="최근 진로 설정이나 하반기 이직 결정에 사주 데이터 분석을 접목해보고 싶습니다." class="w-full px-4 py-3"></textarea>
+                        <label class="block text-slate-500 mb-1.5 font-bold">참여 이유 한 줄 요약</label>
+                        <textarea rows="2" required placeholder="하반기 이직을 고민하고 있어 명리 분석을 경험하고 싶습니다." class="w-full px-4 py-2.5 rounded-2xl border border-purple-100"></textarea>
                     </div>
-                    <button type="submit" class="w-full bg-[#C5A880] hover:bg-white text-black font-semibold py-4 text-xs uppercase tracking-[0.2em] transition-all duration-500">
-                        신청 지원서 제출하기
+                    <button type="submit" class="w-full bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 text-xs round-btn shadow-sm transition">
+                        체험 참가 신청하기
                     </button>
                 </form>
 
@@ -547,26 +467,26 @@
         </div>
     </section>
 
-    <!-- 푸터 단원 -->
-    <footer class="bg-[#050505] border-t border-stone-900 py-20 text-center text-xs text-stone-600 relative z-10 font-light">
-        <div class="max-w-7xl mx-auto px-8 space-y-8">
-            <div class="flex items-center justify-center space-x-3">
-                <span class="font-cinzel text-lg tracking-[0.3em] text-white">DITTO</span>
-                <span class="h-3 w-[1px] bg-stone-800"></span>
-                <span class="font-orbitron text-[10px] tracking-widest text-[#C5A880]">AI</span>
+    <!-- 다정한 감성 푸터 -->
+    <footer class="bg-white/60 border-t border-purple-100 py-16 text-center text-xs text-slate-400 relative z-10 font-light">
+        <div class="max-w-7xl mx-auto px-6 space-y-6">
+            <div class="flex items-center justify-center space-x-2">
+                <span class="font-nunito text-sm font-black text-purple-600">DITTO</span>
+                <span class="h-3 w-[1px] bg-purple-200"></span>
+                <span class="font-gowun text-xs text-slate-400">AI</span>
             </div>
             
-            <p class="tracking-wider">&copy; 2026 DITTO AI Inc. All rights reserved.</p>
+            <p>&copy; 2026 DITTO AI Inc. All rights reserved.</p>
             
-            <p class="text-[10px] text-stone-700 max-w-xl mx-auto leading-relaxed">
-                디토에이아이(DITTO AI)가 연산하는 모든 운명 보고서는 전통 사주명리학과 에니어그램 가치 분류에 기반한 가이드라인이며, 타당한 현실적 극복과 주체적인 안정을 도모하는 라이프 카운셀링 서포터용 결과물입니다.
+            <p class="text-[10px] text-slate-400 max-w-lg mx-auto leading-relaxed">
+                디토에이아이(DITTO AI)가 생성해 드리는 분석 보고서는 나를 다정하게 돌아보고 일상을 따뜻하게 개척해 나가기 위한 긍정 행동 가이드라인용 데이터 분석 결과물입니다.
             </p>
         </div>
     </footer>
 
-    <!-- 자바스크립트 엔진 (럭셔리 UI 제어 및 모의 만세력 산출 수식 탑재) -->
+    <!-- 자바스크립트 엔진 (모의 명반 가동 로직 내장) -->
     <script>
-        // 모바일 헤더 메뉴 활성화
+        // 모바일 메뉴 토글 제어
         const menuBtn = document.getElementById('menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         
@@ -574,48 +494,47 @@
             mobileMenu.classList.toggle('hidden');
         });
 
-        // 한글 만세력 치환 딕셔너리
+        // 명리 4기둥 천간 지지 배열
         const cheongan = ['갑', '을', '병', '정', '무', '기', '경', '신', '임', '계'];
         const jiji = ['자', '축', '인', '묘', '진', '사', '오', '미', '신', '유', '술', '해'];
 
         const simulatedResults = {
-            // 결정형 4대 운세 템플릿 풀세트
             typeA: {
                 water: "강함", fire: "존재", earth: "보조", metal: "보조", wood: "약함",
-                summary1: "차가운 머리 + 뜨거운 가슴의 융합",
-                summary2: "쉽게 무너지지 않는 기획적이고 완벽한 구조형 인간",
-                overall: "주성향이 논리적 지식 탐구가에 가까운 당신은 사주에 지혜를 뜻하는 수(水)의 비축도가 상당하여 분석과 기획에 최상의 역량을 발휘합니다. 금년도는 우주의 에너지 흐름 상 용신 기운이 적합하여 전반적인 판단 미스를 방어하고 안전한 도약이 보장됩니다.",
-                love: "사람을 보는 안목이 상당히 엄격하여 다소 신중한 출발을 보이나, 긴 정서적 관찰 끝에 깊은 교감이 보장되는 상생형 인연이 정해집니다. 평화롭고 나를 정서적으로 이해해 주는 반려자를 맞이할 기회가 열립니다.",
-                wealth: "체계적인 관제와 꼼꼼한 마름질이 돋보이는 한 해입니다. 불확실한 도박적 자산보다, 안정성이 검증된 문서 중심의 투자나 기술 연동형 계약에서 큰 수확을 거두게 되며 가을철 수확도가 극대화됩니다.",
-                career: "기민한 두뇌 회전과 완벽한 시스템 구조 설계 능력이 취업 전형에서 큰 매력 요소로 작용합니다. 이직이나 부서 이동 시, 핵심 전문 기획 분야를 목표할 때 본인의 독보적 위치를 가장 영리하게 선점할 것입니다."
+                summary1: "지혜로운 마음과 차분한 분석력",
+                summary2: "내면이 유연하여 어떤 갈등에도 쉽게 무너지지 않는 기획형 구조",
+                overall: "지혜를 뜻하는 물(水)의 비축이 풍부하여, 현생의 고민을 기민하고 똑 부러지게 해결할 준비가 되어 있습니다. 올해는 나를 응원하는 긍정적인 파동이 적재적소에 활성화될 것입니다.",
+                love: "마음을 열기 전엔 신중하지만, 한 번 신뢰하면 긴 시간 동안 소중한 정서적 유대를 만들어가는 따뜻하고 든든한 파트너를 맞이하게 되는 시기입니다.",
+                wealth: "불확실한 투자 지출을 영리하게 막는 마름질이 대단히 잘 돌아갑니다. 기술 계약이나 가치 있는 장기 문서 취득에서 가을 무렵 든든한 실리를 거두게 됩니다.",
+                career: "기획력과 체계적인 조립 역량이 취업 전형에서 압도적인 무기로 작용합니다. 가치 중심의 직업군이나 이직을 노릴 때 가장 편안하게 자리를 공고히 굳히게 됩니다."
             },
             typeB: {
                 water: "존재", fire: "강함", earth: "보조", metal: "약함", wood: "보조",
-                summary1: "뜨거운 주도력 + 명확한 행동 설계",
+                summary1: "뜨거운 행동력과 시원한 결단",
                 summary2: "환경을 지배하고 목표를 명확하게 성취해내는 개척가",
-                overall: "사주 상 열정적 기운을 품은 화(火)의 흐름이 활발하여 주도적인 해결사이자 개척가 성향이 두드러집니다. 망설이기보다 기회를 먼저 쟁취하는 에너지가 올해 절정에 달하여, 인생의 주요한 돌파구를 전격적으로 마련하게 됩니다.",
-                love: "자유로운 연인으로서 서로의 프라이버시를 지지하면서도 필요할 때 확실하게 에너지를 채워주는 주체적인 연애가 잘 어울립니다. 상반기에 대화의 결이 깊은 사람과 조우할 연력(緣力)이 깊습니다.",
-                wealth: "추진 지수가 높은 만큼, 역동적인 자산 개척 성향이 작동합니다. 단기 정체기에 주저앉지 않고 가치 있는 비즈니스 흐름을 새로 창조해 내거나 인적 네트워킹을 통하여 우수한 수익 파이프라인을 획득합니다.",
-                career: "행동력이 무기인 당신은 실행이 요구되는 마케팅, 사업 기획, 리더십 발휘 직무에서 가치를 빠르게 증명합니다. 하반기에 추진하는 모든 이직과 신규 프로젝트 전형이 유의미한 취업적 결과를 맞이합니다."
+                overall: "열정을 품은 불(火)의 배치가 활성화되어 있어 무엇이든 주도적으로 개척해나갈 수 있습니다. 고민만 하기보다 과감한 행동력으로 하반기 중 막대한 성취를 쥐게 됩니다.",
+                love: "서로의 주체성을 아껴주면서도 즐거움을 활기차게 수혈하는 활기찬 인연운이 들어옵니다. 사교적인 교제 속에서 나를 리드해 줄 든든한 파트너를 만납니다.",
+                wealth: "새로운 가치적 비즈니스 파이프라인을 구축해 내는 재물 개척 능력이 뛰어납니다. 적극적으로 소통하고 문을 두드릴 때 우수한 경제적 모멘텀이 수립됩니다.",
+                career: "추진 지수가 높은 만큼 마케팅, 조율, 리스크 관리 중심의 직업에서 인정을 받습니다. 지원하는 시험이나 가치 전형에서 확실하게 성적표를 쟁취할 확률이 높습니다."
             },
             typeC: {
                 water: "보조", fire: "약함", earth: "강함", metal: "존재", wood: "보조",
-                summary1: "단단한 신뢰성 + 유려한 포용력",
-                summary2: "주위를 포용하고 묵묵히 기틀을 완성해내는 핵심 서포터",
-                overall: "안정과 신뢰를 최우선으로 다지는 토(土)의 기운이 풍성하여 주위 사람을 자연스럽게 끌어당기는 포용력이 무기입니다. 올해는 분주함보다 수성(守城)에 주력하며 내실을 탄탄하게 적립할 때, 더 넓은 기회로 이행하게 됩니다.",
-                love: "화려하고 자극적인 끌림보다, 가늘고 길게 지속될 수 있는 편안한 연애가 최적입니다. 묵묵히 곁을 지키며 나의 고독을 온전히 안아주는 믿음직한 파트너와 정서적 밀도를 높이게 될 연도입니다.",
-                wealth: "불필요한 지출이 완전히 통제되는 흐름입니다. 투기를 지양하고 우직한 자산 방어형 전략을 채택할 때 장기 복리 효율을 도출하게 됩니다. 주거 변동이나 문서 투자에서 길(吉)한 균형을 얻게 됩니다.",
-                career: "성실함과 우수한 리더의 조력자 역량이 빛납니다. 기복이 없고 일의 시작과 끝이 철저한 덕에 기업 내 핵심 포지션으로 취업이나 조기 승진 제안을 획득하며 탄탄하게 성장합니다."
+                summary1: "편안한 포용력과 성실한 기틀",
+                summary2: "주위를 조화롭게 어우르고 언제나 묵묵하게 가치를 다지는 안전형 인재",
+                overall: "신뢰와 신용을 상징하는 흙(土)의 배치가 풍성하여 주위 사람들이 쉴 그늘을 안겨주는 사람입니다. 이번 해에는 조급함을 내려놓을 때 오히려 더 높은 보상과 안정이 보장됩니다.",
+                love: "기복이 심한 사람보단 성실하고 곁을 묵묵하게 지켜주는 반려자형 연인과 연이 깊습니다. 마음을 터놓는 대화를 이어가며 관계의 밀도가 한층 깊어질 연도입니다.",
+                wealth: "가진 것을 튼튼하게 지켜내는 수성(守城) 재물운이 탄탄합니다. 충동 지출이 완전히 통제되어 예적금이나 안전 문서가 건강하게 쌓여 기틀을 완성하게 됩니다.",
+                career: "한결같은 꾸준함과 리더를 빛나게 돕는 지혜로운 서포터 역량 덕에, 면접이나 취업 경쟁 전형에서 '언제나 신뢰할 수 있는 적임자'로 꼽혀 성공적으로 안착합니다."
             }
         };
 
-        // 인터랙티브 제어 엘리먼트
+        // 인터랙티브 데이터 연산 핸들러
         const mysticTriggerBtn = document.getElementById('mystic-trigger-btn');
         const mysticWait = document.getElementById('mystic-wait');
         const mysticLoading = document.getElementById('mystic-loading');
         const loadingTxt = document.getElementById('loading-txt');
 
-        // 매핑 돔 데이터
+        // 돔 객체 셀렉팅
         const resUserHeader = document.getElementById('res-user-header');
         const targetBirthDesc = document.getElementById('target-birth-desc');
         const sajuYear = document.getElementById('saju-year');
@@ -623,14 +542,12 @@
         const sajuDay = document.getElementById('saju-day');
         const sajuHour = document.getElementById('saju-hour');
         
-        // 5대 오행 상태값 돔
         const elemWater = document.getElementById('elem-water');
         const elemFire = document.getElementById('elem-fire');
         const elemEarth = document.getElementById('elem-earth');
         const elemMetal = document.getElementById('elem-metal');
         const elemWood = document.getElementById('elem-wood');
 
-        // 4대 운세 돔
         const scoreOverall = document.getElementById('score-overall');
         const descOverall = document.getElementById('desc-overall');
         const scoreLove = document.getElementById('score-love');
@@ -645,37 +562,35 @@
 
         const cardReport = document.getElementById('poster-report-card');
 
-        // 트리거 작동
+        // 연산 실행 작동 가속
         mysticTriggerBtn.addEventListener('click', () => {
             const userName = document.getElementById('user-name').value.trim();
             const userDate = document.getElementById('user-date').value;
             const userTime = document.getElementById('user-time').value;
 
-            // 이름 입력 값 검증 (완전 한국어 이름 타겟팅)
             if (!userName) {
                 const nameIn = document.getElementById('user-name');
-                nameIn.style.borderColor = 'rgba(219, 39, 119, 0.6)';
-                setTimeout(() => nameIn.style.borderColor = 'rgba(197, 168, 128, 0.2)', 1500);
+                nameIn.classList.add('border-red-400');
+                setTimeout(() => nameIn.classList.remove('border-red-400'), 1500);
                 return;
             }
 
             if (!userDate) {
                 const dateIn = document.getElementById('user-date');
-                dateIn.style.borderColor = 'rgba(219, 39, 119, 0.6)';
-                setTimeout(() => dateIn.style.borderColor = 'rgba(197, 168, 128, 0.2)', 1500);
+                dateIn.classList.add('border-red-400');
+                setTimeout(() => dateIn.classList.remove('border-red-400'), 1500);
                 return;
             }
 
-            // 화면 가리기 및 로딩 전개
+            // 로딩 스위치
             mysticWait.classList.add('hidden');
             cardReport.classList.add('hidden');
             mysticLoading.classList.remove('hidden');
 
             const phases = [
-                "만세력 사주 원국 정렬 중...",
-                "천강지 조합 및 용신 배합 판정 중...",
-                "종합·연애·재물·취업운 상세 지수 가동 중...",
-                "DITTO AI 오리엔탈 데이터 분석 완료"
+                "만세력 사주 원국 조합 중...",
+                "천강지 합 조화 지수 조율 중...",
+                "오늘의 4대 핵심 행동 조언 윤문 중..."
             ];
 
             let step = 0;
@@ -687,11 +602,11 @@
                     loadingTxt.innerText = phases[step];
                 } else {
                     clearInterval(task);
-                    resolveLuxuryReport();
+                    renderPastelReport();
                 }
-            }, 550);
+            }, 500);
 
-            function resolveLuxuryReport() {
+            function renderPastelReport() {
                 mysticLoading.classList.add('hidden');
                 
                 const dateObj = new Date(userDate);
@@ -699,7 +614,6 @@
                 const month = dateObj.getMonth() + 1;
                 const day = dateObj.getDate();
 
-                // 모의 4주 기둥 산출
                 const yGan = cheongan[year % 10];
                 const yJi = jiji[year % 12];
                 const mGan = cheongan[(year + month) % 10];
@@ -708,14 +622,14 @@
                 const dJi = jiji[day % 12];
 
                 // 돔 매핑
-                resUserHeader.innerText = `${userName} 님의 정밀 명반`;
+                resUserHeader.innerText = `${userName} 님의 다정한 명반`;
                 targetBirthDesc.innerText = `${year}년 ${String(month).padStart(2, '0')}월 ${String(day).padStart(2, '0')}일 / ${userTime.split(' ')[0]}`;
                 sajuYear.innerText = `${yGan}${yJi}`;
                 sajuMonth.innerText = `${mGan}${mJi}`;
                 sajuDay.innerText = `${dGan}${dJi}`;
                 sajuHour.innerText = userTime.split(' ')[0];
 
-                // 이름 값에 반응하여 정해진 시나리오 세트 배정
+                // 이름 기반 모의 가중치 분기
                 const fateSelector = (userName.charCodeAt(0) || 77) % 3;
                 let data;
                 let scoreMultiplier = 0;
@@ -731,48 +645,46 @@
                     scoreMultiplier = -3;
                 }
 
-                // 오행 정보 주입
                 elemWater.innerText = data.water;
                 elemFire.innerText = data.fire;
                 elemEarth.innerText = data.earth;
                 elemMetal.innerText = data.metal;
                 elemWood.innerText = data.wood;
 
-                // 4대 운세 점수와 텍스트 역동적 바인딩
-                scoreOverall.innerText = `지수 ${92 + scoreMultiplier}%`;
-                descOverall.innerText = `${userName}님의 ${data.overall}`;
+                // 4대 운세 및 지수 바인딩
+                scoreOverall.innerText = `${92 + scoreMultiplier}%`;
+                descOverall.innerText = data.overall;
 
-                scoreLove.innerText = `지수 ${88 + scoreMultiplier}%`;
-                descLove.innerText = `${userName}님의 ${data.love}`;
+                scoreLove.innerText = `${88 + scoreMultiplier}%`;
+                descLove.innerText = data.love;
 
-                scoreWealth.innerText = `지수 ${85 + scoreMultiplier}%`;
-                descWealth.innerText = `${userName}님의 ${data.wealth}`;
+                scoreWealth.innerText = `${85 + scoreMultiplier}%`;
+                descWealth.innerText = data.wealth;
 
-                scoreCareer.innerText = `지수 ${90 + scoreMultiplier}%`;
-                descCareer.innerText = `${userName}님의 ${data.career}`;
+                scoreCareer.innerText = `${90 + scoreMultiplier}%`;
+                descCareer.innerText = data.career;
 
                 finalSummary1.innerText = `"${data.summary1}"`;
                 finalSummary2.innerText = data.summary2;
 
-                // 결과 카드 활성화
                 cardReport.classList.remove('hidden');
             }
         });
 
-        // 폼 접수 모의 제어
+        // 신청 폼 모의 제어
         const recruitForm = document.getElementById('recruit-form');
         recruitForm.addEventListener('submit', (e) => {
             e.preventDefault();
             const btn = recruitForm.querySelector('button[type="submit"]');
             const originText = btn.innerText;
             btn.disabled = true;
-            btn.className = "w-full bg-stone-800 text-[#C5A880] border border-[#C5A880] font-semibold py-4 text-xs uppercase tracking-[0.2em] transition-all";
-            btn.innerHTML = "<i class='fa-solid fa-check mr-2'></i> 접수 처리가 완료되었습니다";
+            btn.className = "w-full bg-emerald-500 text-white font-bold py-3 text-xs round-btn shadow-sm transition";
+            btn.innerHTML = "<i class='fa-solid fa-circle-check mr-1.5'></i> 접수가 성공적으로 완료되었습니다!";
 
             setTimeout(() => {
                 recruitForm.reset();
                 btn.disabled = false;
-                btn.className = "w-full bg-[#C5A880] hover:bg-white text-black font-semibold py-4 text-xs uppercase tracking-[0.2em] transition-all duration-500";
+                btn.className = "w-full bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 text-xs round-btn shadow-sm transition";
                 btn.innerText = originText;
             }, 3000);
         });
